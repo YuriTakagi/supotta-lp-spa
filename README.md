@@ -49,3 +49,67 @@ npx sirv-cli build/client/ --single
 ## Styling
 
 This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
+
+## Memo
+
+```
+project-root/
+├── app/
+│   ├── components/
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   └── ...
+│   ├── hooks/
+│   │   ├── useStrapi.ts
+│   │   └── ...
+│   ├── routes/
+│   │   ├── _index.tsx
+│   │   ├── products.tsx
+|   |   |-- products.$id.tsx
+|   |   |-- contact.tsx
+│   │   └── ...
+│   ├── styles/
+│   │   ├── global.css
+│   │   └── reset.css
+│   ├── types/
+│   │   ├── strapi.d.ts
+│   │   └── ...
+│   ├── utils/
+│   │   ├── api.ts
+│   │   └── ...
+│   ├── entry.client.tsx
+│   └── root.tsx
+├── public/
+│   ├── favicon.ico
+│   └── ...
+├── server.js
+├── vite.config.js
+├── package.json
+└── tsconfig.json
+```
+
+説明：
+
+1. app/: Remixアプリケーションのメインディレクトリ
+   - components/: 再利用可能なReactコンポーネント
+   - hooks/: カスタムReactフック（Strapiデータフェッチ用のフックなど）
+   - routes/: Remixのルート（ページコンポーネント）
+   - styles/: グローバルスタイルとリセットCSS
+   - types/: TypeScript型定義（Strapiのレスポンス型など）
+   - utils/: ユーティリティ関数（APIリクエスト、データ整形など）
+   - entry.client.tsx: クライアントサイドエントリーポイント
+   - root.tsx: アプリケーションのルートコンポーネント
+
+2. public/: 静的アセット用ディレクトリ
+
+3. server.js: カスタムサーバー設定（必要な場合）
+
+4. vite.config.ts: Vite設定ファイル（SPAモードの設定を含む）
+
+5. package.json: プロジェクトの依存関係とスクリプト
+
+6. tsconfig.json: TypeScript設定ファイル
+
+注意点：
+- Strapiとの連携は主にhooks/useStrapi.tsとutils/api.tsで行います。
+- CSS ModulesはRemixで自動的にサポートされるため、[コンポーネント名].module.cssファイル(例：Header.module.css)を作成し、対応するコンポーネントでインポートするだけです。
