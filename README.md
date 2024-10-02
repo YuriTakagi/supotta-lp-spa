@@ -113,3 +113,26 @@ project-root/
 注意点：
 - Strapiとの連携は主にhooks/useStrapi.tsとutils/api.tsで行います。
 - CSS ModulesはRemixで自動的にサポートされるため、[コンポーネント名].module.cssファイル(例：Header.module.css)を作成し、対応するコンポーネントでインポートするだけです。
+
+## How to develop
+1. developブランチを最新にする
+```
+git switch develop
+git pull origin develop
+```
+2. developブランチからfeature/#[issue番号]ブランチを作成する
+```
+git switch develop
+git switch -c feature/#1
+```
+3. リントチェック(エラーが出たら修正)
+```
+npm run lint
+```
+4. 作業内容をコミット・プッシュ
+```
+git add ファイル名
+git commit -m "コミットメッセージ"
+```
+5. developブランチに対してプルリクエストを作成
+6. 問題なければマージ
