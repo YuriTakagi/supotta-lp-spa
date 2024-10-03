@@ -127,7 +127,9 @@ git switch -c feature/#1
 ```
 3. リントチェック(エラーが出たら修正)
 ```
+npm run format
 npm run lint
+npm run check
 ```
 4. 作業内容をコミット・プッシュ
 ```
