@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import ChevronRightIcon from "../icon/ChevronRightIcon";
+import ChevronRightIcon from "../Icon/ChevronRightIcon";
 import styles from "./TopicPath.module.css";
 type BreadcrumbItem = {
   name: string;
