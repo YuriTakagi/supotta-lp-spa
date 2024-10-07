@@ -6,6 +6,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import TopicPath from "app/components/TopicPath/TopicPath";
 import resetStyles from "./styles/reset.css";
 import Header from "./components/Header/Header";
 
@@ -37,6 +38,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         <Header />
+        <TopicPath />
         {children}
         <ScrollRestoration />
         <Scripts />
