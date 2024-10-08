@@ -7,8 +7,8 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import TopicPath from "app/components/TopicPath/TopicPath";
+import globalStyles from "~/styles/global.css?url";
 import resetStyles from "~/styles/reset.css?url";
-import globalStyles from "~/styles/global.css?url"
 import Header from "./components/Header/Header";
 
 export const links: LinksFunction = () => [

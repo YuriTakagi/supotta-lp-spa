@@ -1,9 +1,9 @@
 .menu {
-    display: none;
+  display: none;
 }
 
 .menuBtnChecked {
-    /* 最長のliに合わせて中央寄せ */
-    width: fit-content;
-    margin: auto;
+  /* 最長のliに合わせて中央寄せ */
+  width: fit-content;
+  margin: auto;
 }

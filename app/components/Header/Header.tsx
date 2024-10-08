@@ -1,14 +1,13 @@
-import { useState } from 'react';
-import HeaderIcons from '../Icon/HeaderIcons';
-import HamburgerMenu from './HamburgerMenu';
-import styles from './Header.module.css'
+import { useState } from "react";
+import HeaderIcons from "../Icon/HeaderIcons";
+import HamburgerMenu from "./HamburgerMenu";
+import styles from "./Header.module.css";
 
 export default function Header() {
-
   return (
     <header className={styles.header}>
       <div className={styles.navtextContainer}>
-          <HeaderIcons />
+        <HeaderIcons />
       </div>
       <div className={styles.headerLink}>
         <div className={styles.spHeader}>
@@ -21,5 +20,5 @@ export default function Header() {
         </div>
       </div>
     </header>
-);
+  );
 }
