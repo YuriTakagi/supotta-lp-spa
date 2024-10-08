@@ -9,6 +9,7 @@ import {
 import TopicPath from "app/components/TopicPath/TopicPath";
 import globalStyles from "~/styles/global.css?url";
 import resetStyles from "~/styles/reset.css?url";
+import Footer from "./components/Header/Footer";
 import Header from "./components/Header/Header";
 
 export const links: LinksFunction = () => [
@@ -47,6 +48,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         {children}
         <ScrollRestoration />
         <Scripts />
+        <Footer />
       </body>
     </html>
   );
