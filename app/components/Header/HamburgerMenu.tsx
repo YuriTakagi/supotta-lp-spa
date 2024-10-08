@@ -4,15 +4,18 @@ import HamburgerMenuIcon from "../Icon/HamburgerMenuIcon";
 
 export default function HamburgerMenu() {
   const [isOpen, setIsOpen] = useState(false)
+  function toggleMenu() {
+    setIsOpen(!isOpen)
+  }
 
   return (
     <div>
       {/* Hamburger Menu Button */}
-      <button className={styles.iconContainer} type="button" onClick={() => console.log("動いとる？")}>
+      <button className={styles.iconContainer} type="button" onClick={() => toggleMenu()}>
         <HamburgerMenuIcon />
       </button>
       {/* Menu */}
-      <ul className={`${styles.menu} ${isOpen ? styles.menuBtnChecked : ""}`}>
+      <ul className={isOpen === false ? styles.menu : styles.menuBtnChecked }>
         <li>
           <a href="/index.html">HOME</a>
         </li>
