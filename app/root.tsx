@@ -7,8 +7,10 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import TopicPath from "app/components/TopicPath/TopicPath";
+import globalStyles from "~/styles/global.css?url";
+import resetStyles from "~/styles/reset.css?url";
 import Footer from "./components/Header/Footer";
-import resetStyles from "./styles/reset.css";
+import Header from "./components/Header/Header";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -25,6 +27,10 @@ export const links: LinksFunction = () => [
     rel: "stylesheet",
     href: resetStyles,
   },
+  {
+    rel: "stylesheet",
+    href: globalStyles,
+  },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -37,6 +43,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        <Header />
         <TopicPath />
         {children}
         <ScrollRestoration />
