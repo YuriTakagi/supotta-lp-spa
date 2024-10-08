@@ -3,19 +3,14 @@ import styles from "app/components/Header/HamburgerMenu.module.css";
 import HamburgerMenuIcon from "../Icon/HamburgerMenuIcon";
 
 export default function HamburgerMenu() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    console.log("toggle")
-    setIsOpen((prevState) => !prevState);
-  };
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <div>
       {/* Hamburger Menu Button */}
-      <div className={styles.iconContainer} onClick={toggleMenu}>
+      <button className={styles.iconContainer} type="button" onClick={() => console.log("動いとる？")}>
         <HamburgerMenuIcon />
-      </div>
+      </button>
       {/* Menu */}
       <ul className={`${styles.menu} ${isOpen ? styles.menuBtnChecked : ""}`}>
         <li>
