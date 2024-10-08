@@ -1,3 +1,4 @@
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import ChevronRightIcon from "../Icon/ChevronRightIcon";
 import styles from "./TopicPath.module.css";
@@ -36,17 +37,14 @@ export default function TopicPath() {
           </Link>
         </li>
         {breadcrumbs.map((breadcrumb) => (
-          <>
-            <ChevronRightIcon
-              style={{ width: "20px", height: "20px" }}
-              key={breadcrumb.name}
-            />
-            <li className={styles.navLi} key={breadcrumb.name}>
+          <React.Fragment key={breadcrumb.name}>
+            <ChevronRightIcon style={{ width: "20px", height: "20px" }} />
+            <li className={styles.navLi}>
               <Link className={styles.navLink} to={breadcrumb.path}>
                 {getJapanese(breadcrumb.name as keyof typeof translateInfo)}
               </Link>
             </li>
-          </>
+          </React.Fragment>
         ))}
       </ul>
     </nav>
