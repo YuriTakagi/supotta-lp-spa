@@ -1,15 +1,17 @@
+import { Link } from "@remix-run/react";
 import styles from "app/components/Header/HamburgerMenu.module.css";
 import { useState } from "react";
 import HamburgerMenuIcon from "../Icon/HamburgerMenuIcon";
 
 export default function HamburgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
+
   function toggleMenu() {
     setIsOpen(!isOpen);
   }
 
   return (
-    <div>
+    <>
       {/* Hamburger Menu Button */}
       <button
         className={styles.iconContainer}
@@ -19,17 +21,27 @@ export default function HamburgerMenu() {
         <HamburgerMenuIcon />
       </button>
       {/* Menu */}
-      <ul className={isOpen === false ? styles.menu : styles.menuBtnChecked}>
+      <ul className={isOpen ? styles.menuBtnChecked : styles.menu}>
         <li>
-          <a href="/index.html">HOME</a>
+          <Link to="/" prefetch="viewport">
+            HOME
+          </Link>
         </li>
         <li>
-          <a href="/products/index2.html">商品一覧</a>
+          <Link to="/products/" prefetch="viewport">
+            商品一覧
+          </Link>
         </li>
         <li>
-          <a href="https://www.loadoff.jp/">会社HP</a>
+          <Link
+            to="https://www.loadoff.jp/"
+            target="_blank"
+            prefetch="viewport"
+          >
+            会社HP
+          </Link>
         </li>
       </ul>
-    </div>
+    </>
   );
 }

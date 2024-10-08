@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Link } from "@remix-run/react";
 import HeaderIcons from "../Icon/HeaderIcons";
 import HamburgerMenu from "./HamburgerMenu";
 import styles from "./Header.module.css";
@@ -14,9 +14,15 @@ export default function Header() {
           <HamburgerMenu />
         </div>
         <div className={styles.pcHeader}>
-          <a href="/index.html">HOME</a>
-          <a href="/products/index2.html">商品一覧</a>
-          <a href="https://www.loadoff.jp/">会社HP</a>
+          <Link to="/" prefetch="intent">
+            HOME
+          </Link>
+          <Link to="/products/" prefetch="intent">
+            商品一覧
+          </Link>
+          <Link to="https://www.loadoff.jp/" target="_blank" prefetch="intent">
+            会社HP
+          </Link>
         </div>
       </div>
     </header>
