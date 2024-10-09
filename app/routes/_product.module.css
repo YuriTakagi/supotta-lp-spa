@@ -1,4 +1,58 @@
-.title {
-  font-size: 1.5rem;
-  color: burlywood;
+.supottaBlackIcon {
+  display: flex;
+  position: relative;
+}
+.supottaBlackKatafana {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+}
+.supottaBlackGoodPoint {
+  padding-top: 8px;
+}
+.supottaBlackList {
+  padding-top: 16px;
+  width: fit-content;
+  margin: auto;
+  text-decoration: underline; /* 下線 */
+  text-decoration-thickness: 0.5em; /* 線の太さ */
+  text-decoration-color: rgba(230, 187, 0, 0.6); /* 線の色 */
+  text-underline-offset: -0.2em; /* 線の位置。テキストに重なるようにやや上部にする */
+  text-decoration-skip-ink: none; /* 下線と文字列が重なる部分でも下線が省略されない（線が途切れない） */
+}
+@media screen and (min-width: 1279px) {
+  .supottaBlack {
+    padding: 0px 32px;
+  }
+  .supottaBlackIcon {
+    width: 500px;
+    height: auto;
+    white-space: nowrap;
+    position: relative;
+  }
+  .supottaBlackKatafana {
+    font-size: 24px;
+  }
+  .supottaBlackGoodPoint {
+    font-size: 24px;
+    padding: 0px 32px;
+  }
+  .supottaBlackList {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .supottaBlack {
+    padding: 0px 16px;
+  }
+  .supottaBlackIcon {
+    width: 250px;
+    height: auto;
+    white-space: nowrap;
+    position: relative;
+  }
+  .supottaBlackGoodPoint {
+    font-size: 12px;
+    padding: 8px 16px 0px 16px;
+  }
 }
