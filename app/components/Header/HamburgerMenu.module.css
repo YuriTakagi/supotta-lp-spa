@@ -3,7 +3,7 @@
 }
 
 .menuBtnChecked {
-  /* 最長のliに合わせて中央寄せ */
+  /* TODO 最長のliに合わせて中央寄せ */
   width: fit-content;
   margin: auto;
 }

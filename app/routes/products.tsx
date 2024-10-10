@@ -1,5 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
-import styles from "./_products.module.css";
+import SupottaBlackIcon from "../components/Icon/SupottaBlackIcon";
+import styles from "./products.module.css";
 
 export const meta: MetaFunction = () => {
   return [
@@ -11,7 +12,20 @@ export const meta: MetaFunction = () => {
 export default function Products() {
   return (
     <main>
-      <h1 className={styles.title}>製品一覧</h1>
+      <div className={styles.supottaBlack}>
+        <div className={styles.supottaBlackIcon}>
+          <SupottaBlackIcon style={{ width: "100%", height: "auto" }} />
+          <span className={styles.supottaBlackKatafana}>(サポッタ)</span>
+        </div>
+        <div className={styles.supottaBlackGoodPoint}>
+          栽培環境の管理を簡単に栽培データ管理/分析ツール
+        </div>
+        <ul className={styles.supottaBlackList}>
+          <li>置くだけカンタン設置</li>
+          <li>低コスト・小規模からはじめる</li>
+          <li>計測データはクラウド一元管理</li>
+        </ul>
+      </div>
     </main>
   );
 }
