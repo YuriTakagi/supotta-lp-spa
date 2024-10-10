@@ -1,6 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 import SupottaBlackIcon from "../components/Icon/SupottaBlackIcon";
-import styles from "./_product.module.css";
+import styles from "./products.module.css";
 
 export const meta: MetaFunction = () => {
   return [
