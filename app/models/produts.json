@@ -1,0 +1,42 @@
+{
+    "water-quality-sensor": {
+        "NAME": "水質センサー",
+        "IMG": "IMG_3087.JPG",
+        "ICON": {
+            "PHセンサー": "PHSensor.svg",
+            "ECセンサー": "ECSensor.svg",
+            "水温センサー": "WaterTemperatureSensor.svg"
+        },
+        "GOODPOINT": {
+            "1": "・EC・PH・水温を計測",
+            "2": "・3種類の溶液を自動で補給",
+            "3": "・水質を計測すること可能"
+        }
+    },
+    "environmental-": {
+        "NAME": "環境センサー",
+        "IMG": "IMG_2107.JPG",
+        "ICON": {
+            "温度センサー": "TemperatureSensor.svg",
+            "CO2センサー": "CO2Sensor.svg",
+            "湿度センサー": "HumiditySensor.svg"
+        },
+        "GOODPOINT": {
+            "1": "・計測したい場所に設置",
+            "2": "・広範囲・複数の部屋にも対応",
+            "3": "・温度湿度・CO2を測定"
+        }
+    },
+    "water-level-sensor": {
+        "NAME": "水位センサー",
+        "IMG": "IMG_2109.JPG",
+        "ICON": {
+            "水位センサー": "WaterLevelSensor.svg"
+        },
+        "GOODPOINT": {
+            "1": "・水槽の上に設置",
+            "2": "・水位センサーから水面までの距離を計測",
+            "3": "・水の補充タイミングを知ることが可能"
+        }
+    }
+}
